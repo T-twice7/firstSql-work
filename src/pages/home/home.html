@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My DATABASE
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="Add()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Peolpe</h2>
+  <ion-list *ngFor="let me of people; let i=index">
+    <!-- <ion-item-sliding > -->
+      <ion-item nopadding>
+       <h3>{{me.Name}}</h3><br>
+       <h3>{{me.Surname}}</h3><br>
+       <h3>{{me.Contact}}</h3><br>
+       <h3>{{me.Email}}</h3>
+       <!-- <h3></h3> -->
+      </ion-item>
+      <!-- <ion-item-options side="right"> -->
+        <button ion-button color="primary" (click)="update(me.idno)">
+          <ion-icon name="paper"></ion-icon>
+        </button>
+        <button ion-button color="danger" (click)=" delete(me.idno)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      <!-- </ion-item-options> -->
+    <!-- </ion-item-sliding> -->
+  </ion-list>
+</ion-content>
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-title>Balance: ${{balance}}</ion-title>
+  </ion-toolbar>
+</ion-footer> -->

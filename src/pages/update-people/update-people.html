@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My DATABASE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <h2>Edit</h2>
+  <form (ngSubmit)="updateData()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" placeholder="Description" [(ngModel)]="data.Name" name="Name" required="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Surname</ion-label>
+      <ion-input type="text" placeholder="Amount" [(ngModel)]="data.Surname" name="Surname" required="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contact</ion-label>
+      <ion-input type="number" placeholder="Description" [(ngModel)]="data.Contact" name="Contact" required="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" placeholder="Amount" [(ngModel)]="data.Email" name="Email" required="" ></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Update Data</button>
+  </form>
+</ion-content>
